@@ -1,0 +1,122 @@
+@font-face {
+    font-family: plain-light;
+    src: url(fonts/plain-light-webfont.woff);
+}
+@font-face {
+    font-family: plain-regular;
+    src: url(fonts/plain-regular-webfont.woff);
+}
+@font-face {
+    font-family: silk-light;
+    src: url(fonts/silkserif-lightitalic-webfont.woff);
+}
+@font-face {
+    font-family: silk-regular;
+    src: url(fonts/silkserif-regularitalic-webfont.woff);
+}
+*{
+margin: 0%;
+padding: 0%;
+box-sizing: border-box;
+-webkit-font-smoothing: antialiased;
+color: white;
+font-family: plain-light;
+}
+html,body{
+height: 100%;
+width: 100%;
+}
+#loder{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    z-index: 99;
+    padding-top: 15vh;
+    padding-left: 10vw;
+}
+.hed{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 18vh;
+}
+.timer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2vw;
+    width: 16vw;
+}
+.timer h4{
+    font-family: silk-regular;
+    font-weight: 100;
+    font-size: 4vw;
+}
+.timer h5{
+    font-family: silk-regular;
+    font-weight: 100;
+    font-size: 4vw;
+}
+.hed h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+}
+.hed h2{
+    font-size: 6vw;
+    text-transform: uppercase;
+    margin-left: 2vw;
+    animation: now 2s linear 0s infinite;
+}
+@keyframes now {
+    0%{
+        font-family: plain-regular;
+        -webkit-text-stroke: 1px transparent;
+        color: white;
+        font-weight: 100;
+    }
+    45%{
+        font-family: plain-regular;
+        -webkit-text-stroke: 1px transparent;
+        color: white;
+        font-weight: 100;
+    }
+    50%{
+        font-family: silk-regular;
+        -webkit-text-stroke: 1px white;
+        color: transparent;
+        font-weight: 100;
+    }
+    95%{
+        font-family: silk-regular;
+        -webkit-text-stroke: 1px white;
+        color: transparent;
+        font-weight: 100;
+    }
+    100%{
+        font-family: plain-regular;
+        -webkit-text-stroke: 1px transparent;
+        color: white;
+        font-weight: 100;
+    }
+    
+}
+.wait{
+    margin-left: 15vw;
+    margin-top: 5vh;
+    overflow: hidden;
+}
+.wait h3{
+    font-size: 1vw;
+    font-weight: 100;
+}
+#main{
+width: 100%;
+position: relative;
+overflow: hidden;
+}
+#container-first{
+height: 100vh;
+width: 100%;
+position: relative;
+}
