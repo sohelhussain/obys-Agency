@@ -21,6 +21,7 @@ box-sizing: border-box;
 -webkit-font-smoothing: antialiased;
 color: white;
 font-family: plain-light;
+cursor: none;
 }
 html,body{
 height: 100%;
@@ -119,4 +120,96 @@ overflow: hidden;
 height: 100vh;
 width: 100%;
 position: relative;
+background-color: #151515;
+}
+.mousefollower{
+    height: 40px;
+    width: 40px;
+    background-color: transparent !important;
+    mix-blend-mode: normal;
+    border: 1px solid #fff;
+}
+nav{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 3.5vw;
+}
+nav .nav-left-la{
+    display: flex;
+    align-items: flex-start;
+    gap: 20vw;
+}
+nav .nav-left-text h4{
+    font-weight: 100;
+    line-height: 100%;
+}
+nav .nav-left-ra{
+    display: flex;
+    align-items: flex-start;
+    gap: 3vw;
+}
+nav .nav-left-ra a{
+    font-weight: 100;
+    text-decoration: none;
+}
+.hero{
+    padding-left: 28vw;
+    padding-top: 5vw;
+}
+.hero .hero-text{
+    height: 7.5vw;
+    overflow: hidden;
+}
+.hero .hero-text h1{
+    font-size: 8vw;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+#container-second{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #151515;
+    padding: 7vw 0;
+    padding-left: 28vw;
+}
+.video-box{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.video-box .video-cursor{
+    width: 10vw;
+    height: 10vw;
+    background-color: orange;
+    position: absolute;
+    top: -15%;
+    left: 70%;
+    border-radius: 50%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+.video-box .video-cursor i{
+    font-size: 2.5vw;
+}
+.video-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    z-index: 1;
+}
+.video-box video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    z-index: 0;
 }
