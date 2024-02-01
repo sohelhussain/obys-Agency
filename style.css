@@ -27,6 +27,7 @@ html,body{
 height: 100%;
 width: 100%;
 }
+/* ----------------***--------loder--------------- */
 #loder{
     width: 100%;
     height: 100vh;
@@ -35,6 +36,7 @@ width: 100%;
     z-index: 99;
     padding-top: 15vh;
     padding-left: 10vw;
+    /* display: none; */
 }
 .hed{
     display: flex;
@@ -117,11 +119,13 @@ position: relative;
 overflow: hidden;
 background-color: #151515;
 }
+/* ----------------***--------container-first--------------- */
 #container-first{
 height: 100vh;
 width: 100%;
 position: relative;
 background-color: #151515;
+/* display: none; */
 }
 .mousefollower{
     height: 40px;
@@ -168,6 +172,7 @@ nav .nav-left-ra a{
     line-height: 100%;
     text-transform: uppercase;
 }
+/* ----------------***--------container-second--------------- */
 #container-second{
     position: relative;
     width: 100%;
@@ -175,6 +180,7 @@ nav .nav-left-ra a{
     background-color: #151515;
     padding: 7vw 0;
     padding-left: 28vw;
+    /* display: none; */
 }
 .video-box{
     width: 100%;
@@ -219,6 +225,7 @@ nav .nav-left-ra a{
     width: 100%;
     min-height: 100vh;
     padding: 80px;
+    /* display: none; */
 }
 .third-head{
     margin-left: 28vw;
@@ -376,4 +383,56 @@ nav .nav-left-ra a{
 }
 ._canvas_container{
     z-index: 99999999999 !important;
+}
+#container-four{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: none;
+}
+#container-five{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 3vh;
+}
+#container-five .hed-mar-left{
+    white-space: nowrap;
+}
+#container-five .hed-mar-left h2{
+    font-weight: 100;
+    font-family: "silk-light";
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+    display: inline-block;
+    font-size: 7vw;
+    text-transform: uppercase;
+}
+#container-five .hed-mar-left h3{
+    font-weight: 100;
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+    display: inline-block;
+    font-size: 7vw;
+    text-transform: uppercase;
+}
+#container-five .hed-mar-right{
+    white-space: nowrap;
+}
+#container-five .hed-mar-right h2{
+    font-weight: 100;
+    font-family: "silk-light";
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+    display: inline-block;
+    font-size: 7vw;
+    text-transform: uppercase;
+}
+#container-five .hed-mar-right h3{
+    font-weight: 100;
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+    display: inline-block;
+    font-size: 7vw;
+    text-transform: uppercase;
 }
