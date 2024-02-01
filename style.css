@@ -36,7 +36,7 @@ width: 100%;
     z-index: 99;
     padding-top: 15vh;
     padding-left: 10vw;
-    /* display: none; */
+    display: none;
 }
 .hed{
     display: flex;
@@ -125,7 +125,7 @@ height: 100vh;
 width: 100%;
 position: relative;
 background-color: #151515;
-/* display: none; */
+display: none;
 }
 .mousefollower{
     height: 40px;
@@ -180,7 +180,7 @@ nav .nav-left-ra a{
     background-color: #151515;
     padding: 7vw 0;
     padding-left: 28vw;
-    /* display: none; */
+    display: none;
 }
 .video-box{
     width: 100%;

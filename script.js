@@ -182,6 +182,21 @@ const sherryEffect = () => {
 };
 sherryEffect();
 
+const rowH1 = document.querySelectorAll(`.row-one h1`);
+const rowPerent = document.querySelectorAll(`.pe-con-tex`);
+rowPerent.forEach((Perent)=>{
+    Perent.addEventListener('mouseenter',()=>{
+      gsap.to(".row-one h1",{
+        y:-45,
+      })
+    })
+    Perent.addEventListener('mouseleave',()=>{
+      gsap.to(".row-one h1",{
+        y:0,
+      })
+    })
+})
+
 // bug:- scrollTrigger are not working properly but gsap are working
 gsap.to(".hed-mar-left",{
   x:-1000,
