@@ -36,7 +36,7 @@ width: 100%;
     z-index: 99;
     padding-top: 15vh;
     padding-left: 10vw;
-    display: none;
+    /* display: none; */
 }
 .hed{
     display: flex;
@@ -125,7 +125,7 @@ height: 100vh;
 width: 100%;
 position: relative;
 background-color: #151515;
-display: none;
+/* display: none; */
 }
 .mousefollower{
     height: 40px;
@@ -180,7 +180,7 @@ nav .nav-left-ra a{
     background-color: #151515;
     padding: 7vw 0;
     padding-left: 28vw;
-    display: none;
+    /* display: none; */
 }
 .video-box{
     width: 100%;
@@ -246,7 +246,7 @@ nav .nav-left-ra a{
     margin-top: 100px;
 }
 .row-one .pe-con-tex{
-    background-color: green;
+    /* background-color: green; */
     height: 3vw;
     margin-bottom: 30px;
     overflow: hidden;
@@ -388,13 +388,99 @@ nav .nav-left-ra a{
     position: relative;
     width: 100%;
     min-height: 100vh;
-    display: none;
+    /* display: none; */
 }
+#container-four .round{
+    width: 350px;
+    height: 350px;
+    background-color: #FFA63D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: 50%;
+    margin-top: 10%;
+    transform: translateX(-50%);
+}
+#container-four .round h4 span{
+    font-family: "silk-light";
+}
+.four-head{
+    margin-top: 15vh;
+    margin-left: 28vw;
+}
+.four-head h1{
+    font-size: 8vw;
+    text-transform: uppercase;
+}
+.four-head .line{
+    margin-top: 70px;
+    height: 1px;
+    width: 90%;
+    background-color: white;
+}
+.four-rapper{
+    margin-top: 50px;
+    margin-left: 28vw;
+    position: relative;
+}
+.four-para{
+    width: 50%;
+}
+.four-para p{
+    font-size: 2.5vw;
+    line-height: 1.2;
+}
+.four-about{
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+}
+.four-about img{
+    width: 34vw;
+}
+.four-about-para{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 23%;
+}
+.achiv-blue{
+    width: 34vw;
+    background-color: #3F7DF4;
+    padding: 5vw 4vw;
+    position: absolute;
+    top: 78%;
+    left: 30%;
+}
+.blue-row{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+    padding: 3vw 0vw;
+}
+.four-line{
+    margin-top: 700px;
+    height: 1px;
+    width: 62%;
+    background-color: white;
+    margin-left: 28vw;
+}
+.last-four{
+    margin-top: 20px;
+    font-family: plain-light;
+    text-transform: capitalize;
+    font-weight: 100;
+    margin-left: 28vw;
+}
+/* -------------------***-------containers-five------ */
 #container-five{
     position: relative;
     width: 100%;
     height: 100vh;
     padding: 3vh;
+    /* display: none; */
 }
 #container-five .hed-mar-left{
     white-space: nowrap;

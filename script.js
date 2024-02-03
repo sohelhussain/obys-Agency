@@ -197,7 +197,8 @@ rowPerent.forEach((Perent)=>{
     })
 })
 
-// bug:- scrollTrigger are not working properly but gsap are working
+const hedMove = () => {
+  // bug:- scrollTrigger are not working properly but gsap are working
 gsap.to(".hed-mar-left",{
   x:-1000,
   duration: 10,
@@ -221,4 +222,18 @@ gsap.from(".hed-mar-right",{
     // scrub: true,
     marker: true
   }
+})
+};
+hedMove();
+
+const thridFour = document.querySelector(`.round`);
+thridFour.addEventListener(`mouseenter`,() => {
+  gsap.to(".round",{
+    scale:.9
+  })
+})
+thridFour.addEventListener(`mouseleave`,() => {
+  gsap.to(".round",{
+    scale:1
+  })
 })
