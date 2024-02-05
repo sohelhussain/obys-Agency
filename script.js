@@ -1,43 +1,43 @@
-// const locoScrolling = () => {
-//   gsap.registerPlugin(ScrollTrigger);
+const locoScrolling = () => {
+  gsap.registerPlugin(ScrollTrigger);
 
-//   // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
+  // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
 
-//   const locoScroll = new LocomotiveScroll({
-//     el: document.querySelector("#main"),
-//     smooth: true,
-//   });
-//   // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
-//   locoScroll.on("scroll", ScrollTrigger.update);
+  const locoScroll = new LocomotiveScroll({
+    el: document.querySelector("#main"),
+    smooth: true,
+  });
+  // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+  locoScroll.on("scroll", ScrollTrigger.update);
 
-//   // tell ScrollTrigger to use these proxy methods for the "#main" element since Locomotive Scroll is hijacking things
-//   ScrollTrigger.scrollerProxy("#main", {
-//     scrollTop(value) {
-//       return arguments.length
-//         ? locoScroll.scrollTo(value, 0, 0)
-//         : locoScroll.scroll.instance.scroll.y;
-//     }, // we don't have to define a scrollLeft because we're only scrolling vertically.
-//     getBoundingClientRect() {
-//       return {
-//         top: 0,
-//         left: 0,
-//         width: window.innerWidth,
-//         height: window.innerHeight,
-//       };
-//     },
-//     // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
-//     pinType: document.querySelector("#main").style.transform
-//       ? "transform"
-//       : "fixed",
-//   });
+  // tell ScrollTrigger to use these proxy methods for the "#main" element since Locomotive Scroll is hijacking things
+  ScrollTrigger.scrollerProxy("#main", {
+    scrollTop(value) {
+      return arguments.length
+        ? locoScroll.scrollTo(value, 0, 0)
+        : locoScroll.scroll.instance.scroll.y;
+    }, // we don't have to define a scrollLeft because we're only scrolling vertically.
+    getBoundingClientRect() {
+      return {
+        top: 0,
+        left: 0,
+        width: window.innerWidth,
+        height: window.innerHeight,
+      };
+    },
+    // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
+    pinType: document.querySelector("#main").style.transform
+      ? "transform"
+      : "fixed",
+  });
 
-//   // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll.
-//   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+  // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll.
+  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
-//   // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
-//   ScrollTrigger.refresh();
-// };
-// locoScrolling();
+  // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
+  ScrollTrigger.refresh();
+};
+locoScrolling();
 
 const loderEffect = () => {
   let tl = gsap.timeline();
@@ -182,7 +182,8 @@ const sherryEffect = () => {
 };
 sherryEffect();
 
-const rowH1 = document.querySelectorAll(`.row-one h1`);
+const textUpper = () => {
+  const rowH1 = document.querySelectorAll(`.row-one h1`);
 const rowPerent = document.querySelectorAll(`.pe-con-tex`);
 rowPerent.forEach((Perent)=>{
     Perent.addEventListener('mouseenter',()=>{
@@ -196,6 +197,8 @@ rowPerent.forEach((Perent)=>{
       })
     })
 })
+};
+textUpper();
 
 const hedMove = () => {
   // bug:- scrollTrigger are not working properly but gsap are working
@@ -226,7 +229,8 @@ gsap.from(".hed-mar-right",{
 };
 hedMove();
 
-const thridFour = document.querySelector(`.round`);
+const btn = () => {
+  const thridFour = document.querySelector(`.round`);
 thridFour.addEventListener(`mouseenter`,() => {
   gsap.to(".round",{
     scale:.9
@@ -235,5 +239,94 @@ thridFour.addEventListener(`mouseenter`,() => {
 thridFour.addEventListener(`mouseleave`,() => {
   gsap.to(".round",{
     scale:1
+  })
+})
+}
+btn();
+
+const hed = document.querySelectorAll(".fo-hed .hedText")
+// hed.forEach((h) => {
+//   let hContent = h.textContent;
+//   let spilit = hContent.split("");
+//   let clutter = "";
+//   spilit.forEach((s) => {
+//     clutter += `<span>${s}</span>`;
+//   })
+//   h.innerHTML = clutter;
+// });
+
+
+
+hed.forEach(function(elem){
+  var elemText  = elem.textContent
+  var splited = elemText.split("")
+  var clutter = ""
+  splited.forEach(function(e){
+      clutter += `<span>${e}</span>`
+  })
+  elem.innerHTML = clutter
+})
+
+
+const foHed = document.querySelector(".fo-hed");
+// foHed.addEventListener("mouseenter",(enter) => {
+//   gsap.to(".fo-hed h1 span",{
+//     opacity: 0,
+//     stagger:.1,
+//     duration:.5
+//   })
+//   gsap.to(".fo-hed h2 span",{
+//     opacity: 1,
+//     stagger:.1,
+//     duration:.5,
+//     delay:0.4,
+//   })
+// });
+// foHed.addEventListener("mouseleave",(enter) => {
+//   gsap.to(".fo-hed h2 span",{
+//     opacity: 0,
+//     stagger:.1,
+//     duration:.5
+//   })
+//   gsap.to(".fo-hed h1 span",{
+//     opacity: 1,
+//     stagger:.1,
+//     duration:.5,
+//     delay:0.4,
+//   })
+// });
+foHed.addEventListener("mouseenter",function(){
+  gsap.to(".fo-hed h1 span",{
+      opacity:0,
+      stagger:0.1,
+      duration:0.5
+  })
+  gsap.to(".fo-hed h2 span",{
+      opacity:1,
+      delay:0.4,
+      duration:0.5,
+      stagger:0.1
+  })
+  gsap.to(".hed-cover svg",{
+    x:40,
+    delay:1
+  })
+})
+
+foHed.addEventListener("mouseleave",function(){
+  gsap.to(".fo-hed h2 span",{
+      opacity:0,
+      stagger:0.05,
+      duration:0.3
+  })
+  gsap.to(".fo-hed h1 span",{
+      opacity:1,
+      delay:0.4,
+      duration:0.3,
+      stagger:0.05
+  })
+  gsap.to(".hed-cover svg",{
+    x:0,
+    // delay:1
   })
 })
