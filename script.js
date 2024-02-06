@@ -54,6 +54,7 @@ const loderEffect = () => {
   });
   tl.to("#loder", {
     y: "-100%",
+    display:"none",
     ease: "power4.out",
     duration: 1,
   });
@@ -138,6 +139,7 @@ const containerSecondEffects = () => {
   });
 };
 containerSecondEffects();
+
 const sherryEffect = () => {
   Shery.mouseFollower();
   Shery.makeMagnet("nav a");
@@ -201,30 +203,15 @@ rowPerent.forEach((Perent)=>{
 textUpper();
 
 const hedMove = () => {
-  // bug:- scrollTrigger are not working properly but gsap are working
 gsap.to(".hed-mar-left",{
   x:-1000,
   duration: 10,
-  scrollTrigger:{
-    trigger: "#container-five",
-    scroller:"#main",
-    // start:"top 150%",
-    // end:"bottom -50%",
-    // scrub: true,
-    marker: true
-  }
+  repeat:-1,
 })
 gsap.from(".hed-mar-right",{
   x:-1000,
   duration: 10,
-  scrollTrigger:{
-    trigger: "#container-five",
-    scroller:"#main",
-    // start:"top 150%",
-    // end:"bottom -50%",
-    // scrub: true,
-    marker: true
-  }
+  repeat:-1,
 })
 };
 hedMove();
@@ -244,16 +231,8 @@ thridFour.addEventListener(`mouseleave`,() => {
 }
 btn();
 
-const hed = document.querySelectorAll(".fo-hed .hedText")
-// hed.forEach((h) => {
-//   let hContent = h.textContent;
-//   let spilit = hContent.split("");
-//   let clutter = "";
-//   spilit.forEach((s) => {
-//     clutter += `<span>${s}</span>`;
-//   })
-//   h.innerHTML = clutter;
-// });
+const textUpperMove = () => {
+  const hed = document.querySelectorAll(".fo-hed .hedText")
 
 
 
@@ -269,32 +248,7 @@ hed.forEach(function(elem){
 
 
 const foHed = document.querySelector(".fo-hed");
-// foHed.addEventListener("mouseenter",(enter) => {
-//   gsap.to(".fo-hed h1 span",{
-//     opacity: 0,
-//     stagger:.1,
-//     duration:.5
-//   })
-//   gsap.to(".fo-hed h2 span",{
-//     opacity: 1,
-//     stagger:.1,
-//     duration:.5,
-//     delay:0.4,
-//   })
-// });
-// foHed.addEventListener("mouseleave",(enter) => {
-//   gsap.to(".fo-hed h2 span",{
-//     opacity: 0,
-//     stagger:.1,
-//     duration:.5
-//   })
-//   gsap.to(".fo-hed h1 span",{
-//     opacity: 1,
-//     stagger:.1,
-//     duration:.5,
-//     delay:0.4,
-//   })
-// });
+
 foHed.addEventListener("mouseenter",function(){
   gsap.to(".fo-hed h1 span",{
       opacity:0,
@@ -327,6 +281,8 @@ foHed.addEventListener("mouseleave",function(){
   })
   gsap.to(".hed-cover svg",{
     x:0,
-    // delay:1
   })
 })
+
+};
+textUpperMove();

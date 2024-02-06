@@ -36,7 +36,7 @@ width: 100%;
     z-index: 99;
     padding-top: 15vh;
     padding-left: 10vw;
-    display: none;
+    /* display: none; */
 }
 .hed{
     display: flex;
@@ -125,7 +125,7 @@ height: 100vh;
 width: 100%;
 position: relative;
 background-color: #151515;
-display: none;
+/* display: none; */
 }
 .mousefollower{
     height: 40px;
@@ -180,7 +180,7 @@ nav .nav-left-ra a{
     background-color: #151515;
     padding: 7vw 0;
     padding-left: 28vw;
-    display: none;
+    /* display: none; */
 }
 .video-box{
     width: 100%;
@@ -225,7 +225,7 @@ nav .nav-left-ra a{
     width: 100%;
     min-height: 100vh;
     padding: 80px;
-    display: none;
+    /* display: none; */
 }
 .third-head{
     margin-left: 28vw;
@@ -246,7 +246,6 @@ nav .nav-left-ra a{
     margin-top: 100px;
 }
 .row-one .pe-con-tex{
-    /* background-color: green; */
     height: 3vw;
     margin-bottom: 30px;
     overflow: hidden;
@@ -388,7 +387,7 @@ nav .nav-left-ra a{
     position: relative;
     width: 100%;
     min-height: 100vh;
-    display: none;
+    /* display: none; */
 }
 #container-four .round{
     width: 350px;
@@ -480,7 +479,7 @@ nav .nav-left-ra a{
     width: 100%;
     height: 100vh;
     padding: 3vh;
-    display: none;
+    /* display: none; */
 }
 #container-five .hed-mar-left{
     white-space: nowrap;
@@ -522,6 +521,7 @@ nav .nav-left-ra a{
     font-size: 7vw;
     text-transform: uppercase;
 }
+/* --------------*****---------footer----------------- */
 footer{
     width: 100%;
     height: 100vh;
@@ -546,12 +546,14 @@ footer .footer-head h2{
     left: 0;
     top: -18px;
     position: absolute;
-    opacity: 0;
+    font-family: "silk-light";
+
 }
 footer .footer-head h2 span{
     font-family: "silk-light";
     -webkit-text-stroke: 1px white;
     color: transparent;
+    opacity: 0;
 }
 footer .footer-head svg{
     width: 7vw;
@@ -561,5 +563,4 @@ footer .footer-head svg{
     height: 1px;
     width: 80%;
     background-color: white;
-    /* margin-left: 28vw; */
 }
