@@ -54,7 +54,7 @@ const loderEffect = () => {
   });
   tl.to("#loder", {
     y: "-100%",
-    display:"none",
+    display: "none",
     ease: "power4.out",
     duration: 1,
   });
@@ -186,103 +186,100 @@ sherryEffect();
 
 const textUpper = () => {
   const rowH1 = document.querySelectorAll(`.row-one h1`);
-const rowPerent = document.querySelectorAll(`.pe-con-tex`);
-rowPerent.forEach((Perent)=>{
-    Perent.addEventListener('mouseenter',()=>{
-      gsap.to(".row-one h1",{
-        y:-45,
-      })
-    })
-    Perent.addEventListener('mouseleave',()=>{
-      gsap.to(".row-one h1",{
-        y:0,
-      })
-    })
-})
+  const rowPerent = document.querySelectorAll(`.pe-con-tex`);
+  rowPerent.forEach((Perent) => {
+    Perent.addEventListener("mouseenter", () => {
+      gsap.to(".row-one h1", {
+        y: -45,
+      });
+    });
+    Perent.addEventListener("mouseleave", () => {
+      gsap.to(".row-one h1", {
+        y: 0,
+      });
+    });
+  });
 };
 textUpper();
 
 const hedMove = () => {
-gsap.to(".hed-mar-left",{
-  x:-1000,
-  duration: 10,
-  repeat:-1,
-})
-gsap.from(".hed-mar-right",{
-  x:-1000,
-  duration: 10,
-  repeat:-1,
-})
+  gsap.to(".hed-mar-left", {
+    x: -1000,
+    duration: 10,
+    repeat: -1,
+  });
+  gsap.from(".hed-mar-right", {
+    x: -1000,
+    duration: 10,
+    repeat: -1,
+  });
 };
 hedMove();
 
 const btn = () => {
   const thridFour = document.querySelector(`.round`);
-thridFour.addEventListener(`mouseenter`,() => {
-  gsap.to(".round",{
-    scale:.9
-  })
-})
-thridFour.addEventListener(`mouseleave`,() => {
-  gsap.to(".round",{
-    scale:1
-  })
-})
-}
+  thridFour.addEventListener(`mouseenter`, () => {
+    gsap.to(".round", {
+      scale: 0.9,
+    });
+  });
+  thridFour.addEventListener(`mouseleave`, () => {
+    gsap.to(".round", {
+      scale: 1,
+    });
+  });
+};
 btn();
 
 const textUpperMove = () => {
-  const hed = document.querySelectorAll(".fo-hed .hedText")
+  const hed = document.querySelectorAll(".fo-hed .hedText");
 
+  hed.forEach(function (elem) {
+    var elemText = elem.textContent;
+    var splited = elemText.split("");
+    var clutter = "";
+    splited.forEach(function (e) {
+      clutter += `<span>${e}</span>`;
+    });
+    elem.innerHTML = clutter;
+  });
 
+  const foHed = document.querySelector(".fo-hed");
 
-hed.forEach(function(elem){
-  var elemText  = elem.textContent
-  var splited = elemText.split("")
-  var clutter = ""
-  splited.forEach(function(e){
-      clutter += `<span>${e}</span>`
+  foHed.addEventListener("mouseenter",function(){
+    gsap.to(".fo-hed h1 span",{
+        opacity:0,
+        stagger:0.1,
+        duration:0.5
+    })
+    gsap.to(".fo-hed h2 span",{
+        opacity:1,
+        delay:0.4,
+        duration:0.5,
+        stagger:0.1
+    })
+    gsap.to(".hed-cover svg",{
+      x:40,
+      delay:1
+    })
   })
-  elem.innerHTML = clutter
-})
 
-
-const foHed = document.querySelector(".fo-hed");
-
-foHed.addEventListener("mouseenter",function(){
-  gsap.to(".fo-hed h1 span",{
-      opacity:0,
-      stagger:0.1,
-      duration:0.5
+  foHed.addEventListener("mouseleave",function(){
+    gsap.to(".fo-hed h2 span",{
+        opacity:0,
+        stagger:0.05,
+        duration:0.3
+    })
+    gsap.to(".fo-hed h1 span",{
+        opacity:1,
+        delay:0.4,
+        duration:0.3,
+        stagger:0.05
+    })
+    gsap.to(".hed-cover svg",{
+      x:0,
+    })
   })
-  gsap.to(".fo-hed h2 span",{
-      opacity:1,
-      delay:0.4,
-      duration:0.5,
-      stagger:0.1
-  })
-  gsap.to(".hed-cover svg",{
-    x:40,
-    delay:1
-  })
-})
-
-foHed.addEventListener("mouseleave",function(){
-  gsap.to(".fo-hed h2 span",{
-      opacity:0,
-      stagger:0.05,
-      duration:0.3
-  })
-  gsap.to(".fo-hed h1 span",{
-      opacity:1,
-      delay:0.4,
-      duration:0.3,
-      stagger:0.05
-  })
-  gsap.to(".hed-cover svg",{
-    x:0,
-  })
-})
 
 };
 textUpperMove();
