@@ -283,3 +283,13 @@ const textUpperMove = () => {
 
 };
 textUpperMove();
+
+const navMenu = () => {
+  gsap.to("nav .nav-menu .nav-menu-left .nav-hed h1",{
+    y:"0%",
+    stagger:{
+      amount:2
+    }
+  })
+};
+navMenu();
