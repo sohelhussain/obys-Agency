@@ -153,6 +153,8 @@ nav .nav-menu {
   background-color: #ffa63d;
   position: absolute;
   z-index: 999;
+  display: flex;
+  align-items: center;
 }
 nav .nav-menu-left {
   width: 60%;
@@ -160,6 +162,19 @@ nav .nav-menu-left {
   background-color: #3f7df4;
   padding-left: 3.5vw;
   padding-top: 15vw;
+  display: none;
+}
+.repper-link{
+  background-color: gray;
+  overflow: hidden;
+  height: 2.2vw;
+}
+.repper-link h1{
+  font-size: 2vw;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) .5s;
+}
+.repper-link:hover h1{
+  transform: translateY(-100%);
 }
 nav .nav-menu .nav-menu-left .nav-hed {
   background-color: red;

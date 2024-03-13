@@ -28,6 +28,7 @@ The primary objective of Obys Agency is to emulate the essence of Awwwards while
 - Three.js Integration: The integration of Three.js empowers Obys Agency with 3D graphics capabilities, enabling the creation of stunning visual effects and immersive elements that push the boundaries of traditional web design.
 
 - Sherry.js Implementation: Through Sherry.js, the website optimizes performance and enhances user experience by efficiently managing resources and minimizing load times, ensuring swift navigation and seamless interaction.
+
 ## Learning Lessons in Obys Agency Project:
 
 - Making Websites Look Good Everywhere: Ever wondered how websites magically adjust to fit your phone, iPad, or big desktop screen? You're going to learn just that! We'll delve into the art of responsive web design, ensuring your creations look stunning no matter the device.
