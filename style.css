@@ -162,19 +162,18 @@ nav .nav-menu-left {
   background-color: #3f7df4;
   padding-left: 3.5vw;
   padding-top: 15vw;
-  display: none;
 }
 .tree-row h3 {
-  margin-bottom: 30px;
+  margin-top: 70px;
+  margin-bottom: 20px;
   letter-spacing: -.1px;
 }
 .repper-link{
-  background-color: gray;
   overflow: hidden;
   height: 2.4vw;
 }
 .repper-link h1{
-  font-size: 2vw;
+  font-size: 1.7vw;
   transition: all cubic-bezier(0.19, 1, 0.22, 1) .5s;
 }
 .repper-link:hover h1{
