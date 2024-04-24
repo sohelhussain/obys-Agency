@@ -659,3 +659,8 @@ footer .footer-head svg {
 .last-text {
   margin-top: 3vh;
 }
+
+
+@media (max-width: 767px) {
+  
+}
