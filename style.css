@@ -179,7 +179,7 @@ nav .nav-menu-left {
   transform: translateY(-100%);
 }
 nav .nav-menu .nav-menu-left .nav-hed {
-  background-color: red;
+  /* background-color: red; */
   width: fit-content;
   line-height: 1;
   overflow: hidden;
