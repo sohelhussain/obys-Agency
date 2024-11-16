@@ -143,6 +143,7 @@ nav {
   justify-content: space-between;
   padding: 3.5vw;
   position: relative;
+  display: block;
 }
 /* ----------------***--------nav-btn--------------- */
 nav .nav-menu {
