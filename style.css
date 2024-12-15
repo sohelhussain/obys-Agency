@@ -156,6 +156,7 @@ nav .nav-menu {
   z-index: 999;
   display: flex;
   align-items: center;
+  display: none;
 }
 nav .nav-menu-left {
   width: 60%;
