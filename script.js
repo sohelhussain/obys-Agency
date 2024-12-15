@@ -284,7 +284,35 @@ const textUpperMove = () => {
 };
 textUpperMove();
 
+
+
 const navMenu = () => {
+
+  let isMenuOpen = false;
+
+// Add event listener to the menu button
+document.querySelector('.menu').addEventListener('click', () => {
+  // Toggle the menu state
+  isMenuOpen = !isMenuOpen;
+
+  if (isMenuOpen) {
+    // Open the menu with GSAP animation
+    gsap.to("nav .nav-menu", {
+      duration: 0.5,  // Animation duration
+      opacity: 1,
+      display: "block", // Ensure visibility
+      ease: "power2.out" // Smooth easing
+    });
+  } else {
+    // Close the menu with GSAP animation
+    gsap.to("nav .nav-menu", {
+      duration: 0.5,  // Animation duration
+      opacity: 0,
+      display: "none", // Hide after animation
+      ease: "power2.in" // Smooth easing
+    });
+  }
+});
   gsap.to("nav .nav-menu .nav-menu-left .nav-hed h1",{
     y:"0%",
     stagger:{

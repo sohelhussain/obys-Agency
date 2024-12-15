@@ -37,7 +37,7 @@ body {
   z-index: 99;
   padding-top: 15vh;
   padding-left: 10vw;
-  display: none;
+  /* display: none; */
 }
 .hed {
   display: flex;
@@ -143,7 +143,7 @@ nav {
   justify-content: space-between;
   padding: 3.5vw;
   position: relative;
-  display: block;
+  display: flex;
 }
 /* ----------------***--------nav-btn--------------- */
 nav .nav-menu {
@@ -157,6 +157,11 @@ nav .nav-menu {
   display: flex;
   align-items: center;
   display: none;
+}
+
+.menu {
+  position: relative;
+  z-index: 999;
 }
 nav .nav-menu-left {
   width: 60%;
